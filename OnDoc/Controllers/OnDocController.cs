@@ -38,5 +38,13 @@ namespace OnDoc.Controllers
 
             return Ok(await gateway.AddExecutor(newEntity));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddAccount(ACCOUNTS newEntity)
+        {
+            var gateway = new PersonsGateway();
+
+            return Ok(await gateway.AddAccount(newEntity));
+        }
     }
 }
